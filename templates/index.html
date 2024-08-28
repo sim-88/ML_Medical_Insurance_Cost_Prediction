@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Insurance Cost Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='mystyles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="header">
+        <h1>Medical Insurance Cost Prediction</h1>
+
+        <div class="dropdown">
+            <button class="btn btn-primary btn-dropdown" id="aboutModelButton">Description</button>
+                <div class="dropdown-content">
+                    <p>The purpose of this model is to accurately estimates medical insurance expenses for individuals based on factors like age, gender, BMI, number of children, smoking status, and region. It facilitates informed decision-making and personalized insurance plans, enhancing healthcare cost management and financial planning for users.</p>
+                </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-primary btn-dropdown" id="performance">Performance</button>
+                <div class="dropdown-content">
+                    <p>Approach: Gradient Boosting Regressor<br>r-squared(for training data): 0.8941<br>r-squared(for testing data): 0.8798</p>
+                </div>
+        </div>
+
+
+    </div>
+    <div class="made-by">😊Made by Simarpreet Kaur</div>
+    <br><br>
+    <div class="main-box">
+        <h2 style="text-align: center;color:rgb(146, 86, 45)"><u>Customer Details</u></h2><br>
+        <form action="/" method="post">
+            <div class="form-label">
+                <label for="age">Age:</label>
+            </div>
+            <input class="form-input" type="number" name="age" id="age" required><br><br>
+
+            <div class="form-label">
+                <label for="sex">Sex:</label>
+            </div>
+            <select class="form-input" name="sex" id="sex" required>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select><br><br>
+
+            <div class="form-label">
+                <label for="bmi">BMI:</label>
+            </div>
+            <input class="form-input" type="number" name="bmi" id="bmi" step="0.01" required><br><br>
+
+            <div class="form-label">
+                <label for="children">Number of Children:</label>
+            </div>
+            <input class="form-input" type="number" name="children" id="children" required><br><br>
+
+            <div class="form-label">
+                <label for="smoker">Smoker:</label>
+            </div>
+            <select class="form-input" name="smoker" id="smoker" required>
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+            </select><br><br>
+
+            <div class="form-label">
+                <label for="region">Region:</label>
+            </div>
+            <select class="form-input" name="region" id="region" required>
+                <option value="0">Southeast</option>
+                <option value="1">Southwest</option>
+                <option value="2">Northeast</option>
+                <option value="3">Northwest</option>
+            </select><br><br>
+
+            <input class="submit-button" type="submit" value="Predict">
+        </form>
+
+        {% if prediction is not none %}
+            <div class="output-box">
+                <h2 style="color:darkslateblue">Predicted Charges:${{ prediction }}</h2>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

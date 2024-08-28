@@ -1,0 +1,115 @@
+body {
+    background-image: url('med2.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #F0F8FF; /* Lightest blue background for the header */
+    padding: 20px;
+    text-align: center;
+    color: #000080; /* Blue color for the header text */
+}
+
+.made-by {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    font-size: 20px;
+    color: #000080; /* Blue color for the "Made by" text */
+}
+
+.main-box {
+    border: 3px solid #f1b269; /* Classic outline color */
+    background-color: rgba(255, 255, 255, 0.8); /* 3D-look BOX background color with transparency */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 550px;
+    margin-left: 100px; /* Adjust the margin to move the form BOX to the left */
+}
+.form-label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-input {
+    padding: 5px;
+    border: 2px solid #55c4d3; /* Classic outline color */
+    border-radius: 5px;
+    width: 200px;
+}
+
+.submit-button {
+    background-color: #4b75e9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.output-box {
+    margin-top: 20px;
+    border: 3px solid #55c4d3; /* Classic outline color */
+    background-color: rgba(255, 255, 255, 0.8); /* 3D-look BOX background color with transparency */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+}
+/* styles.css */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* styles.css */
+.btn-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    z-index: 1;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+        /* Add margin between the buttons */
+#aboutModelButton {
+    margin-right: 100px;
+}
+.btn-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add spacing between the buttons */
+.btn-dropdown + .btn-dropdown {
+    margin-left: 100px;
+}
